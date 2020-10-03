@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <style>*{margin: 0;padding: 0;font-family: sans-serif;}.app{background-color: #f8f9fa;display: grid;grid-template-rows: auto;grid-template-columns: auto;}</style>
+    <style>*{margin: 0;padding: 0;font-family: sans-serif;}.app{background-color: #f8f9fa;}</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     <div class="app">
+        <%-  include('../partials/header.ejs') %>
+        <%- include('../partials/errorMessage.ejs') %>
         <%- body %>
     </div>
     <script>$(document).ready(()=>{$(".app").height($(window).height());$(".app").width($(window).width());$(window).on("resize",function(){$(".app").height($(window).height());$(".app").width($(window).width());});})</script>
